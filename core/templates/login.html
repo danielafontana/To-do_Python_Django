@@ -1,0 +1,50 @@
+{% include "header.html"%}
+{% load static %}
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="full-page login-page new-login" >
+        <div class="content">
+            <div class="container">
+                <div class="row d-flex-justify">
+                    <img src="{% static 'img/cat-white.png' %}" alt="cat" width="180" class="cat-img"/>
+                    <div class="col-xl-5 col-lg-5 col-md-8 col-sm-12 pl-0" id="formulario">
+                        <form action="submit" method="POST" >
+                            {% csrf_token %}
+                            <div class="card card-login card-hidden new-card">
+                                <div class="card-content">
+                                    <h1 id='titulo' class="white-color">Login</h1>
+                                    <div class="">
+                                        <div class="login-user-pass">
+                                            <i class="material-icons white-color icon-position">face</i>
+                                            <label class="control-label white-color">Usuário</label>
+                                            <input id='name' type="text" name="username" class="input-style">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="login-user-pass">
+                                            <i class="material-icons white-color icon-position">lock_outline</i>
+                                            <label class="control-label white-color">Senha</label>
+                                            <input id='password' type="password" name="password" class="input-style">
+                                        </div>
+                                    </div>
+                                </div>
+                                {% for message in messages %}
+                                <div class="login-error">
+                                    <strong>ERRO : </strong>{{message}}
+                                </div>
+                                {% endfor %}
+                                <div class="footer text-center">
+                                    <button type="submit" class="btn-login animate">Entrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{% include "header.html"%}
+{% load static %}
+
+<title>Agenda</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/agenda_style.css' %}">
+</head>
+
+<body>
+	<div class="full-page lock-page">
+		<div class="content">
+			<div class="container-lg">
+				<div class="row d-flex-justify">
+					<div class="col-lg-6 col-md-8 col-sm-12 pl-0">
+						<div class="card agenda-card">
+							<img src="{% static 'img/espiral3.png' %}" alt="espiral" class="spiral-img" />
+							<h2 id='ag'>Agenda</h2>
+							<div class="card-content agenda-content">
+								<ul id='IconAgen' class="list-group" style="font-size: 18px; margin: 5px;">
+									{% for evento in eventos %}
+									<div style={% if evento.evento_atrasado %} 'color: red' {% endif %}>
+										<li class="list-group-item">{{evento.titulo}} - <small
+												class="text-muted">{{evento.getDataEvento}}</small>
+											(<a href="evento/?id={{evento.id}}">Editar</a>
+											/<a href="evento/delete/{{evento.id}}">Excluir</a>)</li>
+
+									</div>{% endfor %}
+								</ul>
+							</div>
+							<div class="footer text-center" id="box">
+								<a id='novoCad' href="evento/"><button type="button" class="btn btn-primary">Novo
+										Evento</button></a>
+								<a id='logout' href='/logout/'><button type="button"
+										class="btn btn-secondary">Logout</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

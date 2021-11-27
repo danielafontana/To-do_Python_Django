@@ -1,0 +1,42 @@
+@import url(login_style.css);
+
+body {
+	background-image: linear-gradient(rgb(87 127 177), rgb(121 143 183)) !important;
+}
+
+.agenda-card {
+	border-radius: 17px !important;
+	text-align-last: center;
+	box-shadow: 4px 4px 16px 9px rgb(0 0 0 / 40%) !important;
+	border: 2px solid #4385f4;
+	padding: 30px 60px;
+	background-color: #ffffff;
+	min-width: 90vh;
+	height: 75vh;
+}
+
+.agenda-content {
+	min-height: 50vh;
+	border: 1px solid lightblue;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	overflow-y: auto;
+}
+
+.container-lg {
+	max-width: 1600px !important;
+}
+
+.event-content {
+	display: flex;
+	justify-content: space-between;
+	margin: 5px;
+}
+
+.spiral-img {
+	z-index: 999;
+	position: absolute;
+	left: -5vh;
+	top: 5vh;
+	width: 9vh;
+}

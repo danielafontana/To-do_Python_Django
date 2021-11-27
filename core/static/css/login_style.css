@@ -1,0 +1,118 @@
+body {
+    background-color: #ffffff !important;
+    background-image: linear-gradient(rgb(6 57 119), rgb(122 166 241)) !important;
+    height: 100vh;
+    width: 100vw;
+}
+
+.btn-login {
+    border: 2px solid #ad00ff;
+    border-radius: 15px;
+    margin-top: 35px;
+    background-color: #b211ff;
+    ;
+    color: white;
+    font-weight: 700;
+    font-size: 13pt;
+    letter-spacing: 1pt;
+    min-width: 170px;
+    padding: 16px 25px;
+    position: relative;
+    margin: 35px 10px 5px;
+    text-transform: uppercase;
+    will-change: box-shadow, transform;
+    line-height: 1.3333333;
+    vertical-align: middle;
+    touch-action: manipulation;
+}
+
+.animate {
+    border-color: #b821ff;
+    box-shadow: 0 0 40px 40px #ad00ff inset, 0 0 7px 2px #770674;
+    transition: all 150ms ease-in-out;
+}
+
+.animate:hover {
+    box-shadow: 0 0 10px 0 #ad00ff inset, 0 0 12px 5px #770674;
+    text-decoration: none;
+    background-color: #bb29ff;
+}
+
+.login-error {
+    text-align: center;
+    color: #f98dce;
+    font-weight: 500;
+    margin-top: 10px;
+    text-shadow: #600040 0.1em 0.1em 0.1em;
+}
+
+.login-page>.content,
+.lock-page>.content {
+    padding-top: 8vh !important;
+}
+
+.full-page:before {
+    background-color: #ffffff !important;
+    background-image: linear-gradient(rgb(6 57 119), rgb(122 166 241)) !important;
+}
+
+.content {
+    min-height: 100vh !important;
+}
+
+.new-card {
+    border-radius: 17px !important;
+    text-align-last: center;
+    box-shadow: 4px 4px 16px 9px rgb(0 0 0 / 40%) !important;
+    border: 2px solid #4385f4;
+    padding: 20px 90px;
+    background-color: #00a3fb1c;
+    min-width: 457px;
+}
+
+.white-color {
+    color: white !important;
+}
+
+.form-control {
+    background-image: linear-gradient(#06397700, #06397700), linear-gradient(#4385f4, #87b9f5) !important;
+    text-align-last: start !important;
+    color: #4385f4 !important;
+    width: 95% !important;
+    margin-right: 35px;
+}
+
+.icon-position {
+    width: fit-content;
+    left: -30px;
+    position: relative;
+    bottom: -61px;
+}
+
+.login-user-pass {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.control-label {
+    margin-bottom: 10px;
+}
+
+.input-style {
+    border-radius: 5px;
+    border: 2px solid white;
+    width: 100%;
+    text-align-last: left;
+}
+
+.d-flex-justify {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cat-img{
+    z-index: 999;
+    margin-left: -15px;
+}

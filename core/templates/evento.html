@@ -1,0 +1,58 @@
+{% include "header.html"%}
+{% load static %}
+
+<title>Evento</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/agenda_style.css' %}">
+</head>
+
+<body>
+	<div class="full-page lock-page">
+		<div class="content">
+			<div class="container-lg">
+				<div class="row d-flex-justify">
+					<div class="col-xl-5 col-lg-5 col-md-8 col-sm-12 pl-0">
+						<div class="card agenda-card">
+							<h2>Evento</h2>
+							<div class="card-content agenda-content">
+								<img src="{% static 'img/espiral3.png' %}" alt="espiral" class="spiral-img" />
+								<form id='formulario' action="submit" method="POST">{% csrf_token %}
+									<div id='boxform'>
+										<input type="number" name="id_evento" value="{{evento.id}}" hidden>
+										<div class="event-content">
+											<label class="font-weight-bold">Título</label> &nbsp;
+											<input type="text" name="titulo" size="24" value="{{evento.titulo}}">
+										</div>
+										<div class="event-content">
+											<label class="font-weight-bold">Data do Evento</label> &nbsp;
+											<input type="dateTime-Local" name="data_evento"
+												value="{{evento.get_data_input_evento}}">
+										</div>
+										<div class="event-content">
+											<label class="font-weight-bold">Local do Evento</label> &nbsp;
+											<input type="text" name="local" size="24" value="{{evento.local}}">
+										</div>
+										<div id='descricao' class="event-content">
+											<label class="font-weight-bold">Descrição</label>&nbsp;
+											<textarea name="Descrição" rows="5"
+												cols="26">{{evento.descricao}}</textarea>
+										</div>
+									</div>
+
+									<div class="mt-4">
+										<button type="submit" class="btn btn-primary mr-4">Salvar</button>
+										<a href="/"><button type="button" name="descricao"
+												class="btn btn-secondary">Cancelar</button></a>
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
